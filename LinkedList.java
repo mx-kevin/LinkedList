@@ -28,6 +28,9 @@ public class LinkedList {
 
         head = deleteFrontNode(head); // 5 -> 8 -> 2 -> NULL
         printList(head);
+
+        head = destroyList(head);
+        printList(head);
     }
 
     public static Node insertToFront(Node head, int data) {
@@ -118,16 +121,22 @@ public class LinkedList {
         return head;
     }
 
-    public static void destroyList(Node head) {
+    public static Node destroyList(Node head) {
         head = null;
+        return head;
     }
 
     public static void printList(Node head) {
+        if (head == null) {
+            System.out.println("List is empty!");
+        }
+
         while (head != null) {
             System.out.print(head.data + " -> ");
             head = head.next;
-        }
 
-        System.out.println("NULL");
+            if (head == null)
+                System.out.println("NULL");
+        }
     }
 }
