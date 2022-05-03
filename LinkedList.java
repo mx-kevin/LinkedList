@@ -18,19 +18,15 @@ public class LinkedList {
         head = insertToFront(head, 11); // 11 -> 5 -> 8 -> 2 -> NULL
         head = insertToBack(head, 23); // 11 -> 5 -> 8 -> 2 -> 23 -> NULL
         head = insertToMiddle(head, 2, 14); // 11 -> 5 -> 14 -> 8 -> 2 -> 23 -> NULL
-
         printList(head);
 
         head = deleteLastNode(head); // 11 -> 5 -> 14 -> 8 -> 2 -> NULL
-
         printList(head);
 
         head = deleteNode(head, 14); // 11 -> 5 -> 8 -> 2 -> NULL
-
         printList(head);
 
         head = deleteFrontNode(head); // 5 -> 8 -> 2 -> NULL
-
         printList(head);
     }
 
